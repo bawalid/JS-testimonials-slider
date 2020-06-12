@@ -1,0 +1,134 @@
+body, html {
+    font-family: 'Inter';
+    color: hsl(240, 38%, 20%);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url(./images/pattern-curve.svg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10%;
+    margin: 0;
+}
+
+.picture, .description {
+    padding: 0 40px;
+}
+
+.picture {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 40px;
+    background-image: url(./images/pattern-bg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.picture .portfolio {
+    display: block;
+    max-width:250px;
+    max-height:250px;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 40px 100px -40px hsl(240, 38%, 20%);
+}
+
+.arrows {
+    padding: 10px;
+    background-color: white;
+    border-radius: 50px;
+    width: 60px;
+    position: absolute;
+    bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0 20px 50px -20px hsl(240, 38%, 20%);
+}
+
+.arrows img {
+    width: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.arrows .iconPrev {
+    place-self: center left;
+}
+
+.arrows .iconNext {
+    place-self: center right;
+}
+
+.description {
+    background-image: url(./images/pattern-quotes.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 15%;
+    margin-top: 2rem;
+}
+
+.description p {
+    text-align: center;
+    line-height: 1.5rem;
+    font-weight: lighter;
+    font-size: 1.1em;
+}
+
+.description h4 {
+    text-align: center;
+    margin: 0;
+}
+
+.description .job {
+    color: hsl(240, 18%, 77%);
+    font-weight: lighter;
+}
+
+@media only screen and (min-width: 720px) {
+    .container {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 10%;
+    }
+    .picture{
+        justify-content: flex-end;
+    }
+    .picture .portfolio{
+        max-width:400px;
+        max-height:400px;
+    }
+    .arrows {
+        left: 20%;
+    }
+    .description {
+        position: absolute;
+        width: 40%;
+        left: 10%;
+        padding: 2%;
+        background-position: top;
+        background-position-x: 20%;
+    }
+    .description p {
+        text-align: left;
+    }
+    .description h4 {
+        text-align: left;
+        display: inline;
+        font-size: 0.8rem;
+    }
+    .description .job {
+        font-size: 0.8rem;
+    }
+  }
